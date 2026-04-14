@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+    .timeline-font {
+      font-family: 'Anton', sans-serif;
+    }
+  </style>
+  <title>AP Bokifa</title>
+
+</head>
+
+<body>
+  <nav class="relative bg-white font-sans border-b border-gray-200 group">
+
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-4 lg:py-7 gap-4 lg:gap-8">
+
+      <div class="flex items-center gap-4 lg:hidden flex-1">
+        <i class="fa-solid fa-bars text-xl text-black cursor-pointer"></i>
+        <i class="fa-solid fa-magnifying-glass text-xl text-black cursor-pointer"></i>
+      </div>
+
+      <div class="flex-1 lg:flex-none flex justify-center lg:block">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/logo.png" alt="Bokifa" class="h-10">
+      </div>
+
+      <div class="hidden lg:block flex-1 max-w-2xl">
+        <div class="flex items-center border border-gray-200 rounded-full overflow-hidden bg-gray-50">
+          <input type="text" placeholder="Search our store..."
+            class="w-full px-6 py-2.5 bg-transparent outline-none text-sm">
+          <button class="bg-[#006633] text-white px-8 py-2.5 flex items-center gap-2">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <span class="text-sm">Search</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 flex-1 lg:flex-none justify-end">
+        <div class="hidden lg:flex items-center gap-4 text-gray-400 text-xs">
+          <span>USD $ ▼</span>
+          <span>ENGLISH ▼</span>
+        </div>
+
+        <div class="flex gap-4 lg:ml-4">
+          <i class="fa-regular fa-user text-black text-xl lg:text-2xl cursor-pointer"></i>
+
+          <div class="relative cursor-pointer">
+            <i class="fa-regular fa-heart text-xl lg:text-2xl text-black"></i>
+            <span
+              class="absolute -top-2 -right-3 bg-orange-500 text-white text-[10px] h-4 w-4 flex justify-center items-center rounded-full">0</span>
+          </div>
+
+          <div class="relative cursor-pointer">
+            <i class="fa-solid fa-bag-shopping text-xl lg:text-2xl text-black"></i>
+            <span
+              class="absolute -top-2 -right-3 bg-orange-500 text-white text-[10px] h-4 w-4 flex justify-center items-center rounded-full">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 border-t border-gray-100  flex justify-between items-center h-12">
+      <ul class=" flex items-center h-full space-x-8">
+
+        <li class="h-full flex items-center font-medium cursor-pointer ">
+          Home <span class="ml-1 text-[10px]">▼</span>
+        </li>
+
+        <li
+          class="group/shop h-full flex items-center text-gray-800 font-medium cursor-pointer hover:text-[#006633] transition-colors">
+          Shop <span class="ml-1 text-[10px]">▼</span>
+
+          <div
+            class="absolute left-0 top-full w-full bg-white shadow-xl border-t border-gray-100 opacity-0 invisible group-hover/shop:opacity-100 group-hover/shop:visible transition-all duration-300 z-50 p-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8">
+              <div>
+                <h3 class="font-bold text-black border-b border-gray-100 pb-2 mb-4 uppercase text-sm tracking-wider">
+                  Shop Layouts</h3>
+                <ul class="space-y-2 text-sm text-gray-500 font-normal">
+                  <li class="hover:text-[#006633]">Left Sidebar</li>
+                  <li class="hover:text-[#006633]">Collection Top</li>
+                  <li class="hover:text-[#006633]">List Collection</li>
+                  <li class="hover:text-[#006633]">Coupon</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-black border-b border-gray-100 pb-2 mb-4 uppercase text-sm tracking-wider">
+                  Product Layouts</h3>
+                <ul class="space-y-2 text-sm text-gray-500 font-normal">
+                  <li class="hover:text-[#006633]">Classic</li>
+                  <li class="hover:text-[#006633]">Scroll Fixed</li>
+                  <li class="hover:text-[#006633]">Left Thumbnail</li>
+                  <li class="hover:text-[#006633]">Right Thumbnail</li>
+                  <li class="hover:text-[#006633]">Without Thumbnail</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold text-black border-b border-gray-100 pb-2 mb-4 uppercase text-sm tracking-wider">
+                  Product Types</h3>
+                <ul class="space-y-2 text-sm text-gray-500 font-normal">
+                  <li class="hover:text-[#006633]">With Video</li>
+                  <li class="hover:text-[#006633]">Upsell</li>
+                  <li class="hover:text-[#006633]">Crosssell</li>
+                  <li class="hover:text-[#006633]">Soldout - In Coming</li>
+                  <li class="hover:text-[#006633]">Product Countdown</li>
+                </ul>
+              </div>
+              <div class="relative overflow-hidden rounded-md group/img">
+                <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/ap_bo_megabanner.png?v=1729484991&width=3000"
+                  class="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" alt="Promo">
+                <div class="absolute inset-0 bg-black/10 flex flex-col justify-center p-6 text-white">
+                  <p class="text-sm">Five day sale!</p>
+                  <h2 class="text-3xl font-bold">Save 50%</h2>
+                  <p class="text-xs mt-2">Use code: <span class="font-bold underline text-white">BIGSALE50</span></p>
+                  <button class="mt-4 bg-white text-black px-4 py-2 rounded-full text-xs font-bold w-max">Shop
+                    Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li
+          class="group/blog relative h-full flex items-center text-gray-800 font-medium cursor-pointer hover:text-[#006633]">
+          Blogs <span class="ml-1 text-[10px]">▼</span>
+          <ul
+            class="absolute left-0 top-full w-48 bg-white shadow-lg border-t-2 border-[#006633] opacity-0 invisible group-hover/blog:opacity-100 group-hover/blog:visible transition-all z-50">
+            <li class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">Blog - Standard</li>
+            <li class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">Blog - Grid</li>
+            <li class="px-4 py-3 hover:bg-gray-50 text-sm text-gray-600">Single Post</li>
+          </ul>
+        </li>
+
+        <li
+          class="group/pages relative h-full flex items-center text-gray-800 font-medium cursor-pointer hover:text-[#006633]">
+          Pages <span class="ml-1 text-[10px]">▼</span>
+          <ul
+            class="flex flex-col absolute left-0 top-full w-48 bg-white shadow-lg border-t-2 border-[#006633] opacity-0 invisible group-hover/pages:opacity-100 group-hover/pages:visible transition-all z-50">
+            <a href=""></a>
+            <a href="aboutus.html"
+              class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">About Us</a>
+            <a href="contactus.html"
+              class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">Contact Us</a>
+            <li class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">Our Team</li>
+            <li class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">Faqs</li>
+            <li class="px-4 py-3 border-b border-gray-50 hover:bg-gray-50 text-sm text-gray-600">Lookbook</li>
+            <li class="px-4 py-3 hover:bg-gray-50 text-sm text-gray-600">404 Error</li>
+          </ul>
+        </li>
+
+        <li class="text-gray-800 font-medium cursor-pointer hover:text-[#006633]">Contact</li>
+      </ul>
+
+      <div class="hidden lg:block text-sm font-medium">
+        <span class="">Need help? Call Us:</span>
+        <span class="text-black font-bold ml-1">+84 2500 888 33</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home -->
+
+  <section class="relative w-full min-h-125 md:min-h-167.5 flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_h1_slide.jpg?v=1728533089&width=3000"
+        class="w-full h-full object-cover object-center" alt="Young Adult Books Banner">
+    </div>
+
+    <div class="relative z-10 max-auto max-w-7xl px-6 w-full grid grid-cols-1 md:grid-cols-2 items-center ">
+
+      <div class="max-w-xl">
+        <p class="text-[#4a8a96] text-lg md:text-xl mb-3 mt-10 font-medium">A brand new series.</p>
+        <h1 class="text-3xl md:text-6xl font-serif text-gray-900 leading-[1.2] mb-5 font-medium tracking-tight">
+          THE WORLD OF <br> YOUNG ADULT <br> BOOKS
+        </h1>
+        <p class="text-gray-700 text-lg mb-10">Save up to 15% on new releases.</p>
+
+        <a href="#"
+          class="inline-flex items-center bg-white text-black px-10 py-4 rounded-full font-bold shadow-lg hover:bg-gray-50 transition-all group">
+          Discover Now
+          <span class="ml-3 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
+
+      <style>
+        @keyframes spinnerRotate {
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-spin-slow {
+          animation: spinnerRotate 6s linear infinite;
+        }
+      </style>
+
+      <div class="absolute left-140  flex justify-center md:justify-start items-center h-full">
+        <div class="md:ml-[-100] mt-10 md:mt-0 relative">
+
+          <div
+            class="relative  flex items-center justify-center w-32 h-32 md:w-45 md:h-45 transition-transform cursor-pointer">
+
+            <div class="absolute inset-0 animate-spin-slow">
+              <img src="https://cdn.shopify.com/s/files/1/0906/6014/3387/files/ap_bo_bgsale_2.png?v=1729500187"
+                class="w-full h-full object-contain" alt="Sale Background">
+            </div>
+
+            <div
+              class="relative z-10 text-center text-white font-bold flex flex-col items-center justify-center pointer-events-none">
+              <div class="text-2xl md:text-3xl leading-none">15%</div>
+              <div class="text-[10px] md:text-xs uppercase tracking-tighter leading-tight">OFF</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- fline-- -->
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 10s linear infinite;
+    }
+
+    /* Optional: Pause on hover */
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+
+  <section class="bg-[#FCF8F3] py-6 border-b border-gray-100 overflow-hidden">
+    <div class=" w-full mx-auto px-4">
+      <div class="overflow-hidden">
+        <div class="animate-marquee  gap-6 ">
+
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 ">
+              <span class="text-[#006633] font-bold">20,898</span>
+              <span class="text-gray-600 text-xl font-medium">books sold</span>
+            </div>
+            <span class="text-[#D4A373]">✱</span>
+
+            <div class="flex items-center gap-2">
+              <span class="text-[#006633] font-bold">97%</span>
+              <span class="text-gray-600 text-xl font-medium">happy customer</span>
+            </div>
+            <span class="text-[#D4A373]">✱</span>
+
+            <div class="flex items-center gap-2">
+              <span class="text-[#006633] font-bold">15,254</span>
+              <span class="text-gray-600 text-xl font-medium">total books</span>
+            </div>
+            <span class="text-[#D4A373]">✱</span>
+
+            <div class="flex items-center gap-2">
+              <span class="text-[#006633] font-bold">1,258</span>
+              <span class="text-gray-600 text-xl font-medium">authors</span>
+            </div>
+            <span class="text-[#D4A373]">✱</span>
+
+            <div class="flex items-center gap-2">
+              <span class="text-[#006633] font-bold">20,898</span>
+              <span class="text-gray-600 text-xl font-medium">books sold</span>
+            </div>
+            <span class="text-[#D4A373]">✱</span>
+
+            <div class="flex items-center gap-2">
+              <span class="text-[#006633] font-bold">97%</span>
+              <span class="text-gray-600 text-xl font-medium">happy customer</span>
+            </div>
+            <span class="text-[#D4A373]">✱</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-[#006633] font-bold">1,258</span>
+            <span class="text-gray-600 text-xl font-medium">authors</span>
+          </div>
+          <span class="text-[#D4A373]">✱</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- this week page--- -->
+
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-end mb-8">
+        <h2 class="md:text-4xl text-2xl font-serif text-gray-900">This week's highlights</h2>
+        <a href="#"
+          class="flex items-center gap-2 border border-gray-200 rounded-full px-6 py-2 text-sm font-medium hover:bg-gray-50 transition-all">
+          Browse All
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+        <div class="group relative">
+          <div class="relative flex aspect-2/3 overflow-hidden rounded-xl bg-gray-100">
+            <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_15.jpg?v=1728615410&width=520"
+              alt="Book Cover"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div
+              class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold w-10 h-10 flex items-center justify-center rounded-full">
+              -15%
+            </div>
+            <button
+              class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="hidden md:block aspect-2/3 rounded-xl bg-gray-200 overflow-hidden">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_7.jpg?v=1728615154&" alt=""
+            class="w-full h-full object-cover">
+        </div>
+        <div class="hidden md:block aspect-2/3 rounded-xl bg-gray-200 overflow-hidden">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_9.jpg?v=1728615231&wid" alt=""
+            class="w-full h-full object-cover">
+        </div>
+        <div class="hidden md:block aspect-2/3 rounded-xl bg-gray-200 overflow-hidden">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_4.jpg?v=1728615048&wid" alt=""
+            class="w-full h-full object-cover">
+        </div>
+        <div class="hidden md:block aspect-2/3 rounded-xl bg-gray-200 overflow-hidden">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_27.jpg?v=1728615792&wid" alt=""
+            class="w-full h-full object-cover">
+        </div>
+        <div class="hidden md:block aspect-2/3 rounded-xl bg-gray-200 overflow-hidden">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_19.jpg?v=1728615539&" alt=""
+            class="w-full h-full object-cover">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!------- poster page----- -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="relative overflow-hidden rounded-3xl h-90 flex items-center group shadow-xl">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/1.jpg?v=1729587818&" alt="Background"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+
+        <div class="relative ml-auto w-full pr-10 text-right z-10">
+          <p class="text-[#4db8ff] text-[13px] font-bold tracking-wider mb-3">Game. Anime. Life</p>
+          <h2 class="text-white text-4xl font-serif font-bold leading-[1.1] mb-8 tracking-tight uppercase">COLLECT
+            <br>
+            SHOP
+          </h2>
+          <a href="#"
+            class="inline-flex items-center bg-white text-black px-7 py-3 rounded-full text-[14px] font-extrabold hover:bg-gray-100 transition-all shadow-lg hover:scale-105">
+            Shop Now <span class="ml-2 text-lg">›</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-3xl h-90  flex items-center group shadow-xl">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/2.jpg?v=1729587818&width=490 " alt="Background"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+
+        <div class="relative ml-auto w-full pr-10 text-right z-10">
+          <p class="text-[#ffcc99] text-[13px] font-bold tracking-wider mb-3">New this week.</p>
+          <h2 class="text-white text-4xl font-serif font-bold leading-[1.1] mb-8 tracking-tight uppercase">THE TRUTH
+            <br> LIES HERE
+          </h2>
+          <a href="#"
+            class="inline-flex items-center bg-white text-black px-7 py-3 rounded-full text-[14px] font-extrabold hover:bg-gray-100 transition-all shadow-lg hover:scale-105">
+            Shop Now <span class="ml-2 text-lg">›</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-3xl h-90 flex items-center group shadow-xl">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/3.jpg?v=1729587817" alt="Background"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+
+        <div class="relative ml-auto w-full pr-10 text-right z-10">
+          <p class="text-[#99ff99] text-[13px] font-bold tracking-wider mb-3">Fiction bestsellers.</p>
+          <h2 class="text-white text-4xl font-serif font-bold leading-[1.1] mb-8 tracking-tight uppercase">WOMAN IN
+            <br>
+            THE WATER
+          </h2>
+          <a href="#"
+            class="inline-flex items-center bg-white text-black px-7 py-3 rounded-full text-[14px] font-extrabold hover:bg-gray-100 transition-all shadow-lg hover:scale-105">
+            Shop Now <span class="ml-2 text-lg">›</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3 book page---- -->
+  <div class="max-w-7xl mx-auto p-6 bg-white font-sans text-gray-800">
+    <h2 class="text-6xl font-serif text-gray-900 mb-10">Picks for you</h2>
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <div class="lg:w-1/2 flex flex-col md:flex-row gap-6 border-r border-gray-100 pr-4">
+        <div class="relative w-full md:w-1/2 flex">
+          <span
+            class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full z-10">-15%</span>
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_16.jpg?v=1728615440"
+            alt="Entitlement Book Cover" class="w-full h-auto rounded-2xl shadow-lg">
+        </div>
+
+        <div class="md:w-1/2 flex flex-col justify-start">
+          <div class="flex text-gray-400 text-xl  mb-1">
+            ★★★★★ <span class="text-black ml-2">(0)</span>
+          </div>
+          <h2 class="text-2xl font-semibold mb-2 leading-tight">The Seven Husbands Of Evelyn Hugo</h2>
+          <p class="text-gray-400 text-sm mb-4 hover:text-black cursor-pointer">Ap Bokifa</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            From the author of The Longest Ride and The Return comes a novel about the enduring legacy of first love,
+            and the decisions that haunt...
+          </p>
+          <div class="text-2xl font-bold text-green-700 mb-6">$29.95</div>
+          <button
+            class="bg-green-700 text-white py-3 px-8 rounded-full font-medium hover:bg-green-800 transition-colors self-start">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
+        <div class="flex gap-4 items-start">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_11.jpg?v=1728615321"
+            class="w-24 h-32 object-cover rounded-2xl shadow-sm">
+          <div>
+            <div class="flex text-yellow-400 text-xs mb-1">★★★★★ <span class="text-gray-400 ml-1">(0)</span></div>
+            <h3 class="font-medium text-sm line-clamp-2">Harry Potter <br> And The...</h3>
+            <p class="text-gray-400 text-xs my-1 hover:text-green-700 cursor-pointer">Ap Bokifa</p>
+            <p class="text-green-700 font-bold">$269.95</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_17.jpg?v=1728615478"
+            class="w-24 h-32 object-cover rounded-2xl shadow-sm">
+          <div>
+            <div class="flex text-yellow-400 text-xs mb-1">★★★★★ <span class="text-gray-400 ml-1">(0)</span></div>
+            <h3 class="font-medium text-sm line-clamp-2">Memoirs Of A <br> Geisha</h3>
+            <p class="text-gray-400 text-xs my-1 hover:text-green-700 cursor-pointer">Ap Bokifa</p>
+            <p class="text-green-700 font-bold">$289.95</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_2.jpg?v=1728614778"
+            class="w-24 h-32 object-cover rounded-2xl shadow-sm">
+          <div>
+            <div class="flex text-yellow-400 text-xs mb-1">★★★★★ <span class="text-gray-400 ml-1">(0)</span></div>
+            <h3 class="font-medium text-sm line-clamp-2">Scattershot: Life, <br> Music, Elton,...</h3>
+            <p class="text-gray-400 text-xs my-1 hover:text-green-700 cursor-pointer">Ap Bokifa</p>
+            <p class="text-green-700 font-bold">$309.95</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_7.jpg?v=1728615154"
+            class="w-24 h-32 object-cover rounded-2xl shadow-sm">
+          <div>
+            <div class="flex text-yellow-400 text-xs mb-1">★★★★★ <span class="text-gray-400 ml-1">(0)</span></div>
+            <h3 class="font-medium text-sm line-clamp-2">The Catcher In <br> The Rye</h3>
+            <p class="text-gray-400 text-xs my-1 hover:text-green-700 cursor-pointer">Ap Bokifa</p>
+            <p class="text-green-700 font-bold">$329.95</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_29.jpg?v=1728615878"
+            class="w-24 h-32 object-cover rounded-2xl shadow-sm">
+          <div>
+            <div class="flex text-yellow-400 text-xs mb-1">★★★★★ <span class="text-gray-400 ml-1">(0)</span></div>
+            <h3 class="font-medium text-sm line-clamp-2 ">Uncertain Walls... <br>A Novel</h3>
+            <p class="text-gray-400 text-xs my-1 hover:text-green-700 cursor-pointer">Ap Bokifa</p>
+            <p class="text-green-700 font-bold">$289.95</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/bo_pro_21.jpg?v=1728615595"
+            class="w-24 h-32 object-cover rounded-2xl shadow-sm">
+          <div>
+            <div class="flex text-yellow-400 text-xs mb-1">★★★★★ <span class="text-gray-400 ml-1">(0)</span></div>
+            <h3 class="font-medium text-sm line-clamp-2">The House of <br> the Spirits</h3>
+            <p class="text-gray-400 text-xs my-1 hover:text-green-700 cursor-pointer">Ap Bokifa</p>
+            <p class="text-green-700 font-bold">$329.95</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- page 4---- -->
+
+  <section class="bg-white py-20 px-6 font-sans relative">
+    <div class="max-w-[1400] mx-auto">
+      <div class="flex justify-between items-start mb-10">
+        <h2 class="md:text-5xl text-4xl font-serif text-gray-900 pt-4">What client says</h2>
+      </div>
+    </div>
+
+    <div class="bg-[#00713d] text-white w-45 h-45  rounded-full  shadow-lg absolute  right-20 top-25 md:block hidden">
+      <div class="text-5xl flex  justify-center font-bold p-5 text-[#e2bb80]">4.8<span
+          class="text-2xl flex items-end ">/5</span></div>
+      <div class="flex items-center justify-center text-[#e2bb80] text-xl my-1">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <div class="text-[10px] underline font-bold tracking-wider text-center px-4">12,598 Verified Reviews</div>
+    </div>
+
+    <div class="flex  bg-[#f7f3f0] gap-6 overflow-x-auto p-16 snap-x mt-12 z-20">
+
+      <div class="min-w-60 bg-white p-8 rounded-2xl shadow-sm snap-center">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-gray-950 text-lg">Joanne H.</h3>
+            <div class="flex text-green-700 text-lg mt-1">
+              ★★★★★
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">Dec 1, 2024</span>
+        </div>
+        <hr class="border-gray-100 mb-8">
+        <h4 class="text-2xl font-semibold mb-5 text-gray-900 leading-tight">This is my favorite bookshop</h4>
+        <p class="text-gray-700 leading-relaxed text-[17px]">
+          Love that you give books to those in need. Great service and can find great value here especially as I
+          prefer hardcover books to add to my collection.
+        </p>
+      </div>
+
+      <div class="min-w-60 bg-white p-8 rounded-2xl shadow-sm snap-center md:block hidden">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-gray-950 text-lg">Viorel M.</h3>
+            <div class="flex text-green-700 text-lg mt-1">
+              ★★★★★
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">Dec 1, 2024</span>
+        </div>
+        <hr class="border-gray-100 mb-8">
+        <h4 class="text-2xl font-semibold mb-5 text-gray-900 leading-tight">Quick and easy</h4>
+        <p class="text-gray-700 leading-relaxed text-[17px]">
+          Costs are low, there's always promotions or discounts, the website is easy to navigate, and knowing that the
+          impact of purchasing makes me feel like I'm doing something good.
+        </p>
+      </div>
+
+      <div class="md:min-w-60 min-w-80 bg-white p-8 rounded-2xl shadow-sm snap-center md:block hidden">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-gray-950 text-lg">Ciaren R.</h3>
+            <div class="flex text-green-700 text-lg mt-1">
+              ★★★★★
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">Dec 1, 2024</span>
+        </div>
+        <hr class="border-gray-100 mb-8">
+        <h4 class="text-2xl font-semibold mb-5 text-gray-900 leading-tight">Excellent service</h4>
+        <p class="text-gray-700 leading-relaxed text-[17px]">
+          The books were wrapped securely and arrived in pristine condition. I sent an email after to books arrived to
+          ask about the author, and I received a prompt reply.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex md:flex-row flex-col justify-around items-center p-10">
+      <div class="flex flex-col items-center text-center p-5">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/box_1.png?v=1729743412" class="h-10 w-10 mb-4">
+        <h2 class="mb-3 uppercase">fast delivery</h2>
+        <p class="text-[#9a9a9a] text-base">Free standard delivery</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-5">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/gift-box_1.png?v=1729743427" class=" h-10 w-10 mb-4">
+        <h2 class="mb-3 uppercase">click & collect</h2>
+        <p class="text-[#9a9a9a] text-base">Multiple gift options available</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-5">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/fire_1.png?v=1729743427" class="h-10 w-10 mb-4">
+        <h2 class="mb-3 uppercase">Great daily deal</h2>
+        <p class="text-[#9a9a9a] text-base">Orders $50 or more</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center p-5 ">
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/book6_1.png?v=1729743426" class="h-10 w-10 mb-4">
+        <h2 class="mb-3 uppercase">click & collect</h2>
+        <p class="text-[#9a9a9a] text-base">Check your local stores now</p>
+      </div>
+    </div>
+
+    <div class="w-full border-t border-gray-200"></div>
+    </div>
+  </section>
+
+  <section class="bg-white  px-6 font-sans relative">
+    <div class="flex md:flex:row flex-col  justify-between md:items-end flex-start  mb-8">
+      <h2 class="md:text-4xl text-5xl  font-serif text-gray-900 mb-2">News & events</h2>
+      <a href="#"
+        class="flex  items-center gap-2 border border-gray-200 rounded-full px-6 py-2 md:text-sm text-2xl font-medium hover:bg-gray-50 transition-all">
+        Browse All
+      </a>
+    </div>
+
+    <div class=" flex justify-around mb-16 gap-5">
+      <div>
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/articles/blog_i_8.jpg?v=1729755150"
+          class=" w-100 h-55 rounded-xl mb-2">
+        <p class="text-3xl hover:text-green-300">Behind the Scenes with Author Victoria Aveyard</p>
+      </div>
+      <div>
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/articles/blog_i_7.jpg?v=1729755134"
+          class=" w-100 h-55 rounded-xl mb-2 md:block hidden">
+        <p class="text-3xl hover:text-green-300 md:block hidden">5 Attractive Bookstore WordPress Themes</p>
+      </div>
+      <div>
+        <img src="https://ap-bokifa.myshopify.com/cdn/shop/articles/blog_i_6.jpg?v=1729755116"
+          class=" w-100 h-55 rounded-xl mb-2 md:block hidden">
+        <p class="text-3xl hover:text-green-300 md:block hidden">Top 10 Books to Make It a Great Yeargh</p>
+      </div>
+
+    </div>
+    <div class="w-full border-t border-gray-200"></div>
+    </div>
+  </section>
+
+
+
+  <!-- footer---- -->
+
+  <footer class="w-full bg-white font-sans pt-12">
+    <div class="max-w-7xl mx-auto px-6  flex flex-col lg:flex-row items-center justify-between gap-10 pb-12">
+
+      <div class="flex flex-col md:flex-row md:items-center gap-6 lg:gap-12 flex-1">
+        <h2 class="md:text-4xl text-5xl font-serif text-gray-900 leading-tight">
+          Stay in the <br> know
+        </h2>
+        <p class="text-gray-500 text-xl max-w-xs leading-relaxed">
+          Subscribe to our newsletter and stay updated on latest offers, discounts and events near you.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-6 flex-1 justify-end w-full">
+        <div
+          class="relative flex items-center bg-[#F7F7F7] rounded-full px-6 py-4 w-full max-w-md shadow-sm border border-gray-50">
+          <input type="email" placeholder="Email id"
+            class="bg-transparent w-full outline-none text-gray-600 placeholder-gray-400 text-sm" />
+          <button
+            class="text-[#006837] font-bold text-sm flex items-center whitespace-nowrap ml-2 hover:opacity-80 transition">
+            Subscribe <span class="ml-1 text-xl leading-none">›</span>
+          </button>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="#"
+            class="md:w-11 md:h-11 w-21 h-21 rounded-full bg-[#18ACFE] flex items-center justify-center text-white hover:scale-105 transition shadow-sm">
+            <i class="fab fa-facebook-f text-sm"></i>
+          </a>
+          <a href="#"
+            class="md:w-11 md:h-11 w-21 h-21 rounded-full bg-[#1A1A1A] flex items-center justify-center text-white hover:scale-105 transition shadow-sm">
+            <span class="font-bold text-xs">𝕏</span>
+          </a>
+          <a href="#"
+            class="md:w-11 md:h-11 w-21 h-21 rounded-full bg-[#9B51E0] flex items-center justify-center text-white hover:scale-105 transition shadow-sm">
+            <i class="fab fa-instagram text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full border-t border-gray-200"></div>
+
+    <div class="max-w-7xl mx-auto px-6  py-16 relative">
+      <div class="  md:flex md:justify-between text-center md:text-start  ">
+
+        <div class="lg:col-span-1">
+          <div class="flex items-center md:justify-start justify-center gap-2 mb-6">
+            <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/logo.png" alt="Bokifa" class="h-10">
+          </div>
+          <p class="text-gray-500  leading-relaxed mb-8">
+            Bokifa draws book lovers of all ages into a community, <br>
+            engage with booklovers and meet their favourite <br>
+            literary personalities.
+
+          </p>
+          <div class="text-[#D4A056] text-4xl font-bold mb-1">+ (84) - 1800 - 4635</div>
+          <p class="text-gray-400 text-md mb-4">contact@example.com</p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif text-gray-900 md:mb-8 md:mt-auto mt-6  pb-1 border-b border-gray-50">Category
+          </h3>
+          <ul class="space-y-2 text-[18px] text-gray-600">
+            <li><a href="#" class="hover:text-[#006837] transition">Action Books</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Comedy</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Drama</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Horror</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Kids Books</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition ">Top 50 Books</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif text-gray-900 md:mb-8 md:mt-auto mt-6 pb-1 border-b border-gray-50 ">Useful
+            links</h3>
+          <ul class="space-y-2 text-[18px] text-gray-600">
+            <li><a href="#" class="hover:text-[#006837] transition">Secure Shopping</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition ">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Terms of Use</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Shipping Policy</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Returns Policy</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Payment Option</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-serif text-gray-900 md:mb-8 md:mt-auto mt-6  pb-1 border-b border-gray-50">Explore
+          </h3>
+          <ul class="space-y-2 text-[18px] text-gray-600">
+            <li><a href="#" class="hover:text-[#006837] transition">About us</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Store Locator</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Kids Club</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Blogs</a></li>
+          </ul>
+        </div>
+
+        <div class="relative">
+          <h3 class="text-xl font-serif text-gray-900 pb-1 md:mb-8 md:mt-auto mt-6 border-b border-gray-50">Get in touch
+          </h3>
+
+          <ul class="space-y-2 text-[18px] text-gray-600">
+            <li><a href="#" class="hover:text-[#006837] transition">Careers</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Become a Franchisee</a></li>
+            <li><a href="#" class="hover:text-[#006837] transition">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full border-t border-gray-200"></div>
+
+    <div class="md:flex md:flex-row justify-between items-center  gap-4 flex flex-col mb-4 mt-4">
+      <p class="text-light">Copyright © 2025 <span class="text-green-600">Bokifa</span>. All rights reserved</p>
+      <img src="https://ap-bokifa.myshopify.com/cdn/shop/files/pay.png?v=1729758744&width=1000" alt="">
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
